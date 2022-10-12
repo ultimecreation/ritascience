@@ -1,0 +1,30 @@
+{
+    "name": "ultimecreation/ritascience",
+    "description": "test",
+    "authors": [
+        {
+            "name": "ultimecreation",
+            "email": "naserbechata@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Classroom\\": "vclassroom/src/",
+            "Interfaces\\": "vinterfaces/src/",
+            "Learn\\": "vlearn/src/",
+            "User\\": "vuser/src/",
+            "Utils\\": "vutils/src/"
+        },
+        "psr-0": {
+            "Classroom\\": "vclassroom/src/",
+            "Interfaces\\": "vinterfaces/src/",
+            "Learn\\": "vlearn/src/",
+            "User\\": "vuser/src/",
+            "Utils\\": "vutils/src/"
+        }
+    }
+}
