@@ -2,7 +2,7 @@
 
 namespace Utils;
 
-require_once(__DIR__ . "/../vendor/autoload.php");
+require_once(__DIR__ . "/../../vendor/autoload.php");
 
 use DateTime;
 use DAO\UserDAO;
@@ -29,7 +29,7 @@ class ConnectionManager
 
     private function __construct()
     {
-        $dotenv = Dotenv::createImmutable(__DIR__ . "/../../../../");
+        $dotenv = Dotenv::createImmutable(__DIR__ . "/../../../../../");
         $dotenv->load();
         $this->envVariables = $_ENV;
         $this->failedLoginMaxTries = !empty($_ENV['VS_FAILED_LOGIN_MAX_TRIES']) 

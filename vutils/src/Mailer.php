@@ -13,7 +13,7 @@ class Mailer
        
         $mail = new PHPMailer(true);
         try {
-            $dotenv = Dotenv::createImmutable(__DIR__ . "/../../../../");
+            $dotenv = Dotenv::createImmutable(__DIR__ . "/../../../../../");
             $dotenv->load();
            
             // set values
@@ -59,7 +59,7 @@ class Mailer
     public static function loadTemplateBody($templateBody,$body)
     {
         // get the emailTemplates dir at the root of the project
-        $emailTemplateDir = __DIR__.'/../../../../emailTemplates';
+        $emailTemplateDir = __DIR__.'/../../../../../emailTemplates';
 
         // the emailmTemplates dir does not exists at the root level
         if(!is_dir($emailTemplateDir)) {

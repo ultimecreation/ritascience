@@ -11,7 +11,7 @@ class Controller
     protected $user;
     protected function __construct($entityManager, $user)
     {
-        $dotenv = Dotenv::createImmutable(__DIR__."/../");
+        $dotenv = Dotenv::createImmutable(__DIR__."/../../");
         $dotenv->safeLoad();
         $this->envVariables = $_ENV;
         $this->entityManager = $entityManager;

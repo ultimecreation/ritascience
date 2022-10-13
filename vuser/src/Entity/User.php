@@ -218,8 +218,8 @@ class User
         $finalThumbnailName = $fileId . "_thumbnail.jpeg";
 
         $imgManager = ImageManager::getSharedInstance();
-        $finalPath = __DIR__ . "/../public/content/user_data/user_img/" . $finalFileName;
-        $finalThumbnailPath = __DIR__ . "/../public/content/user_data/user_img/" . $finalThumbnailName;
+        $finalPath = __DIR__ . "/../../public/content/user_data/user_img/" . $finalFileName;
+        $finalThumbnailPath = __DIR__ . "/../../public/content/user_data/user_img/" . $finalThumbnailName;
 
         if (!$imgManager->resizeToDimension(
             100,

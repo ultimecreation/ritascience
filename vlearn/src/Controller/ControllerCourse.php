@@ -575,7 +575,7 @@ class ControllerCourse extends Controller
                 $filenameToUpload = time() . "_$filenameWithoutSpaces.$extension";
 
                 // no errors, we can process the data
-                $uploadDir = __DIR__ . "/../../../../public/content/user_data/resources";
+                $uploadDir = __DIR__ . "/../../../../../public/content/user_data/resources";
 
                 $success = move_uploaded_file($imageTempName, "$uploadDir/$filenameToUpload");
 
@@ -631,7 +631,7 @@ class ControllerCourse extends Controller
                 $filenameToUpload = time() . "_$filenameWithoutSpaces.$extension";
 
                 // set the target dir and move file
-                $uploadDir = __DIR__ . "/../../../../public/content/user_data/resources";
+                $uploadDir = __DIR__ . "/../../../../../public/content/user_data/resources";
                 $success = move_uploaded_file($fileTempName, "$uploadDir/$filenameToUpload");
 
                 // something went wrong while storing the file, return an error
@@ -750,7 +750,7 @@ class ControllerCourse extends Controller
                 $filenameToUpload = time() . "_$filenameWithoutSpaces.$extension";
 
                 // no errors, we can process the data
-                $uploadDir = __DIR__ . "/../../../../classroom/assets/media/uploads/";
+                $uploadDir = __DIR__ . "/../../../../../classroom/assets/media/uploads/";
                 //$uploadDir = __DIR__ . "/../../../../public/content/user_data/resources";
 
                 $success = move_uploaded_file($imageTempName, "$uploadDir/$filenameToUpload");

@@ -22,7 +22,7 @@ class DoctrineSchemaUpdater{
      * @return  void
      */
     public function __construct(){
-        require(__DIR__."/../../../../bootstrap.php");
+        require(__DIR__."/../../../../../bootstrap.php");
         $this->entityManager = $entityManager;
         $this->tool = new SchemaTool($entityManager);
     }

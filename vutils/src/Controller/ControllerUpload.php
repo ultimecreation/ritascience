@@ -12,7 +12,7 @@ class ControllerUpload
 
     public function __construct($entityManager, $user)
     {
-        $dotenv = Dotenv::createImmutable(__DIR__."/../");
+        $dotenv = Dotenv::createImmutable(__DIR__."/../../");
         $dotenv->safeLoad();
         $this->envVariables = $_ENV;
         $this->entityManager = $entityManager;
@@ -60,8 +60,8 @@ class ControllerUpload
         $filenameToUpload = time() . "_$filenameWithoutSpaces.$extension";
 
         // no errors, we can process the data
-        // $uploadDir = __DIR__ . "/../../../../public/content/user_data/resources";
-        $uploadDir = __DIR__ . "/../../../../{$this->envVariables['VS_RESOURCE_UPLOAD_DIR']}";
+        // $uploadDir = __DIR__ . "/../../../../../public/content/user_data/resources";
+        $uploadDir = __DIR__ . "/../../../../../{$this->envVariables['VS_RESOURCE_UPLOAD_DIR']}";
 
         $success = move_uploaded_file($imageTempName, "$uploadDir/$filenameToUpload");
 
@@ -119,7 +119,7 @@ class ControllerUpload
         $filenameToUpload = time() . "_$filenameWithoutSpaces.$extension";
 
         // set the target dir and move file
-        $uploadDir = __DIR__ . "/../../../../../{$this->envVariables['VS_RESOURCE_UPLOAD_DIR']}";
+        $uploadDir = __DIR__ . "/../../../../../../{$this->envVariables['VS_RESOURCE_UPLOAD_DIR']}";
         $success = move_uploaded_file($fileTempName, "$uploadDir/$filenameToUpload");
 
         // something went wrong while storing the file, return an error

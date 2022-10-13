@@ -2,8 +2,8 @@
 
 namespace User\Controller;
 
-require __DIR__ . "/../../../../../bootstrap.php";
-require __DIR__ . '/../../../../autoload.php';
+require __DIR__ . "/../../../../../../bootstrap.php";
+require __DIR__ . '/../../../../../autoload.php';
 
 use Exception;
 use Utils\Mailer;
@@ -38,7 +38,7 @@ class ControllerUser extends Controller
     public function __construct($entityManager, $user, $url = null)
     {
         // Load env variables 
-        $dotenv = Dotenv::createImmutable(__DIR__ . "/../../../../../");
+        $dotenv = Dotenv::createImmutable(__DIR__ . "/../../../../../../");
         $dotenv->load();
         $this->URL = isset($url) ? $url : $_ENV['VS_HOST'];
         parent::__construct($entityManager, $user);
@@ -1365,10 +1365,10 @@ class ControllerUser extends Controller
                 $emailTtemplateBody = $userLang . "_confirm_account";
 
                 // init i18next instance
-                if (is_dir(__DIR__ . "/../../../../../openClassroom")) {
-                    i18next::init($userLang, __DIR__ . "/../../../../../openClassroom/classroom/assets/lang/__lng__/ns.json");
+                if (is_dir(__DIR__ . "/../../../../../../openClassroom")) {
+                    i18next::init($userLang, __DIR__ . "/../../../../../../openClassroom/classroom/assets/lang/__lng__/ns.json");
                 } else {
-                    i18next::init($userLang, __DIR__ . "/../../../../../classroom/assets/lang/__lng__/ns.json");
+                    i18next::init($userLang, __DIR__ . "/../../../../../../classroom/assets/lang/__lng__/ns.json");
                 }
 
                 $emailSubject = i18next::getTranslation('classroom.register.accountConfirmationEmail.emailSubject');
@@ -1516,10 +1516,10 @@ class ControllerUser extends Controller
                     $emailTtemplateBody = $userLang . "_confirm_email_update";
 
                     // init i18next instance
-                    if (is_dir(__DIR__ . "/../../../../../openClassroom")) {
-                        i18next::init($userLang, __DIR__ . "/../../../../../openClassroom/classroom/assets/lang/__lng__/ns.json");
+                    if (is_dir(__DIR__ . "/../../../../../../openClassroom")) {
+                        i18next::init($userLang, __DIR__ . "/../../../../../../openClassroom/classroom/assets/lang/__lng__/ns.json");
                     } else {
-                        i18next::init($userLang, __DIR__ . "/../../../../../classroom/assets/lang/__lng__/ns.json");
+                        i18next::init($userLang, __DIR__ . "/../../../../../../classroom/assets/lang/__lng__/ns.json");
                     }
 
                     $emailSubject = i18next::getTranslation('classroom.updateUserInfos.emailUpdateConfirmation.emailSubject');

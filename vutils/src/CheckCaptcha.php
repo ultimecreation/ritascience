@@ -2,7 +2,7 @@
 
 namespace Utils;
 
-require_once(__DIR__ . "/../vendor/autoload.php");
+require_once(__DIR__ . "/../../vendor/autoload.php");
 
 use Dotenv\Dotenv;
 
@@ -11,7 +11,7 @@ class CheckCaptcha
     static public function checkCaptcha($userCode, $userIP)
     {
         $curl = curl_init();
-        $dotenv = Dotenv::createImmutable(__DIR__ . "/../");
+        $dotenv = Dotenv::createImmutable(__DIR__ . "/../../");
         $dotenv->load();
         $params = "secret=" . $_ENV['VS_CAPTCHA_SECRET'] . "&response=" . $userCode . "&remoteip=" . $userIP;
         curl_setopt($curl, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
